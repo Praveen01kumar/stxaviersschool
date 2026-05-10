@@ -1,0 +1,18 @@
+<footer class="bg-[var(--background)] text-[var(--text-body)] py-8 border-t border-[var(--border-color)]">
+  <div class="container mx-auto px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="text-sm text-[var(--text-muted)] text-center sm:text-left">
+        <p>&copy; {{ currentYear }} {{profile.name}}, GNM. All Rights Reserved.</p>
+        <p>Designed with care to reflect professional dedication.</p>
+      </div>
+      <div class="flex justify-center items-center space-x-4">
+        <a href="{{profile.email}}" target="_blank" class="text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors" aria-label="Email">
+           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+        </a>
+        <a (click)="$event.preventDefault(); scrollTo('home')" href="#home" class="text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors p-2 bg-[var(--border-color)] rounded-full" aria-label="Scroll to top">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

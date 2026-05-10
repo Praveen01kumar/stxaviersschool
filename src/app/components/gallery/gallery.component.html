@@ -1,0 +1,61 @@
+<section id="gallery" class="section-container bg-[var(--surface)] border-t border-gray-300">
+
+  <div class="container mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14">
+
+      <h2 class="text-3xl md:text-4xl font-bold">
+        {{ galleryCon.header.title }}
+      </h2>
+
+      <p class="text-[var(--primary)] font-medium mt-2 text-lg">
+        {{ galleryCon.header.subtitle }}
+      </p>
+
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      @for(image of galleryCon.images; track image.imageUrl; let i = $index) {
+
+        <div
+          class="group relative overflow-hidden rounded-3xl border border-[var(--border-color)] shadow-[var(--shadow-lg)] bg-[var(--background)]"
+        >
+
+          <div class="overflow-hidden">
+
+            <img
+              [src]="image.imageUrl"
+              [alt]="image.title"
+              class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+            >
+
+          </div>
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"
+          ></div>
+
+          <div
+            class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-all duration-500"
+          >
+
+            <p class="text-white text-xl font-bold tracking-wide">
+              {{ image.title }}
+            </p>
+
+            <div
+              class="w-16 h-1 bg-[var(--primary)] rounded-full mt-3 group-hover:w-28 transition-all duration-500"
+            ></div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

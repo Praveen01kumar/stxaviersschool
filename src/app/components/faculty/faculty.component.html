@@ -1,0 +1,105 @@
+<section id="faculty" class="section-container bg-[var(--background)] border-t border-gray-300">
+  <div class="container mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold">
+        {{ facultyCon.header.title }}
+      </h2>
+
+      <p class="text-[var(--primary)] font-medium mt-2 text-lg">
+        {{ facultyCon.header.subtitle }}
+      </p>
+    </div>
+
+    <div
+      class="relative max-w-3xl mx-auto"
+      (mouseenter)="stopAutoplay()"
+      (mouseleave)="startAutoplay()"
+    >
+
+      <div class="overflow-hidden rounded-2xl shadow-[var(--shadow-lg)] border border-[var(--border-color)]">
+
+        <div
+          class="flex transition-transform duration-500 ease-in-out"
+          [style.transform]="'translateX(-' + currentIndex() * 100 + '%)'"
+        >
+
+          @for(member of faculty(); track member.name) {
+
+            <div class="min-w-full">
+
+              <div class="relative bg-[var(--surface-translucent)] backdrop-blur-sm p-8 h-full min-h-[320px] flex flex-col justify-center">
+                <div class="flex justify-center mb-6">
+                  <img
+                    [src]="member.imageUrl"
+                    [alt]="member.name"
+                    class="w-28 h-28 rounded-full object-cover border-4 border-[var(--primary)] shadow-[var(--shadow-md)]"
+                  >
+
+                </div>
+
+                <div class="text-center">
+
+                  <h3 class="text-2xl font-bold text-[var(--text-heading)] mb-2">
+                    {{ member.name }}
+                  </h3>
+
+                  <p class="text-[var(--primary)] font-semibold mb-4">
+                    {{ member.role }}
+                  </p>
+
+                  <p class="text-[var(--text-body)] leading-relaxed italic">
+                    "{{ member.description }}"
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          }
+
+        </div>
+
+      </div>
+
+      <button
+        (click)="prev()"
+        class="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-4 bg-[var(--surface)] hover:bg-[var(--primary-light)] text-[var(--text-heading)] hover:text-[var(--primary)] rounded-full p-2.5 shadow-md transition-all border border-[var(--border-color)] z-10"
+        aria-label="Previous faculty"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button
+        (click)="next()"
+        class="absolute top-1/2 -translate-y-1/2 right-0 translate-x-4 bg-[var(--surface)] hover:bg-[var(--primary-light)] text-[var(--text-heading)] hover:text-[var(--primary)] rounded-full p-2.5 shadow-md transition-all border border-[var(--border-color)] z-10"
+        aria-label="Next faculty"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 flex space-x-2">
+
+        @for(member of faculty(); track member.name; let i = $index) {
+
+          <button
+            (click)="goTo(i)"
+            class="w-3 h-3 rounded-full transition-all duration-300"
+            [class]="currentIndex() === i ? 'bg-[var(--primary)] scale-125' : 'bg-[var(--border-color)] hover:bg-[var(--text-muted)]'"
+            [attr.aria-label]="'Go to faculty ' + (i + 1)"
+          ></button>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

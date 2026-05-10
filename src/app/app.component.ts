@@ -1,0 +1,60 @@
+import { Component, effect, inject, PLATFORM_ID } from '@angular/core';
+import { HeaderComponent } from './components/header/header.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { isPlatformBrowser } from '@angular/common';
+import { ThemeService } from './services/theme.service';
+import { RouterOutlet } from '@angular/router';
+import { AcademicsComponent } from './components/academics/academics.component';
+import { AdmissionsComponent } from './components/admissions/academics.component';
+import { FacultyComponent } from './components/faculty/faculty.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { EventsComponent } from './components/events/events.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { ResultsComponent } from './components/results/results.component';
+import { FeesComponent } from './components/fees/fees.component';
+export type Theme = 'light' | 'dark' | 'system';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    HeroComponent,
+    AboutComponent,
+    ContactComponent,
+    FooterComponent,
+    AcademicsComponent,
+    AdmissionsComponent,
+    FacultyComponent,
+    GalleryComponent,
+    EventsComponent,
+    BlogComponent,
+    ResultsComponent,
+    FeesComponent
+  ],
+  templateUrl: './app.component.html',
+})
+export class AppComponent {
+  private platformId = inject(PLATFORM_ID);
+  themeService = inject(ThemeService);
+  constructor() {
+    if (isPlatformBrowser(this.platformId)) {
+      effect(() => {
+        const theme = this.getInitialTheme();
+        localStorage.setItem('theme', theme);
+        this.themeService.updateDOM(theme);
+      });
+    }
+  }
+
+  getInitialTheme(): Theme {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      return (localStorage.getItem('theme') as Theme | null) || 'dark';
+    }
+    return 'dark';
+  }
+}

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8">
+  <title>St. Xavier’s Public School</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* 
+      =====================================================================
+      NEW DESIGN SYSTEM: "PREMIUM MEDICAL" & "LUXURY DARK" THEMES
+      =====================================================================
+    */
+
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse-glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 15px var(--primary-glow);
+      }
+
+      50% {
+        box-shadow: 0 0 25px var(--primary-glow), 0 0 10px var(--accent-glow);
+      }
+    }
+
+    /* 1. Light Theme (Premium Medical) */
+    :root,
+    .premium-light-theme {
+      --primary: #0ea5e9;
+      /* sky-500 */
+      --primary-hover: #0284c7;
+      /* sky-600 */
+      --primary-glow: rgba(14, 165, 233, 0.4);
+      --primary-light: #f0f9ff;
+      /* sky-50 */
+
+      --accent: #14b8a6;
+      /* teal-500 */
+      --accent-hover: #0d9488;
+      /* teal-600 */
+      --accent-glow: rgba(20, 184, 166, 0.4);
+
+      --background: #f0f4f8;
+      /* A slightly cooler, more clinical white */
+      --surface: #ffffff;
+      --surface-translucent: rgba(255, 255, 255, 0.6);
+      --glass-border: rgba(255, 255, 255, 0.8);
+
+      --text-heading: #1e293b;
+      /* slate-800 */
+      --text-body: #475569;
+      /* slate-600 */
+      --text-muted: #64748b;
+      /* slate-500 */
+      --text-inverted: #ffffff;
+
+      --border-color: #e2e8f0;
+      /* slate-200 */
+
+      --shadow-color: 220 20% 80%;
+      --shadow-sm: 0 2px 4px hsl(var(--shadow-color) / 0.1);
+      --shadow-md: 0 4px 12px hsl(var(--shadow-color) / 0.12);
+      --shadow-lg: 0 10px 30px hsl(var(--shadow-color) / 0.15);
+      --shadow-xl: 0 20px 50px hsl(var(--shadow-color) / 0.2);
+
+      /* Skill Category Colors */
+
+      /* Clinical & General Nursing (Sky Blue) */
+      --skill-color-clinical: #0ea5e9;
+      /* sky-500 */
+      --skill-color-clinical-glow: rgba(14, 165, 233, 0.5);
+
+      /* Labour Room & Maternal Care (Pink) */
+      --skill-color-labour: #ec4899;
+      /* pink-500 */
+      --skill-color-labour-glow: rgba(236, 72, 153, 0.5);
+
+      /* Sample Collection & Diagnostics (Amber) */
+      --skill-color-diagnostics: #f59e0b;
+      /* amber-500 */
+      --skill-color-diagnostics-glow: rgba(245, 158, 11, 0.5);
+
+      /* Critical Care & Emergency (Red) */
+      --skill-color-icu: #ef4444;
+      /* red-500 */
+      --skill-color-icu-glow: rgba(239, 68, 68, 0.5);
+
+      /* Technical & Documentation (Slate) */
+      --skill-color-technical: #64748b;
+      /* slate-500 */
+      --skill-color-technical-glow: rgba(100, 116, 139, 0.5);
+
+      /* Admin & Soft Skills (Violet) */
+      --skill-color-admin: #8b5cf6;
+      /* violet-500 */
+      --skill-color-admin-glow: rgba(139, 92, 246, 0.5);
+
+    }
+
+    /* 2. Dark Theme (Luxury Dark / Neon Noir) */
+    .premium-dark-theme {
+      --primary: #00E5FF;
+      /* Neon Cyan */
+      --primary-hover: #72F8FF;
+      /* Lighter Neon Cyan */
+      --primary-glow: rgba(0, 229, 255, 0.4);
+      --primary-light: rgba(0, 229, 255, 0.1);
+
+      --accent: #38bdf8;
+      /* Vibrant Blue */
+      --accent-hover: #7dd3fc;
+      /* sky-300 */
+      --accent-glow: rgba(56, 189, 248, 0.3);
+
+      --background: #121212;
+      /* Soft Black */
+      --surface: #1E1E1E;
+      /* Slightly Lighter Black */
+      --surface-translucent: rgba(255, 255, 255, 0.07);
+      /* Glassmorphism BG */
+      --glass-border: rgba(255, 255, 255, 0.1);
+
+      --text-heading: #f1f5f9;
+      /* slate-100 */
+      --text-body: #94a3b8;
+      /* slate-400 */
+      --text-muted: #64748b;
+      /* slate-500 */
+      --text-inverted: #000000;
+
+      --border-color: rgba(255, 255, 255, 0.15);
+
+      --shadow-color: 0 0% 0%;
+      /* Black for deep shadows */
+      --shadow-sm: 0 2px 4px hsl(var(--shadow-color) / 0.3);
+      --shadow-md: 0 4px 12px hsl(var(--shadow-color) / 0.4);
+      --shadow-lg: 0 10px 30px hsl(var(--shadow-color) / 0.5);
+      --shadow-xl: 0 20px 50px hsl(var(--shadow-color) / 0.6);
+
+      /* Skill Category Colors */
+      --skill-color-clinical: #38bdf8;
+      /* sky-400 */
+      --skill-color-clinical-glow: rgba(56, 189, 248, 0.5);
+      --skill-color-technical: #94a3b8;
+      /* slate-400 */
+      --skill-color-technical-glow: rgba(148, 163, 184, 0.5);
+      --skill-color-soft: #34d399;
+      /* emerald-400 */
+      --skill-color-soft-glow: rgba(52, 211, 153, 0.5);
+      --skill-color-admin: #a78bfa;
+      /* violet-400 */
+      --skill-color-admin-glow: rgba(167, 139, 250, 0.5);
+    }
+
+    /* 3. System Default Preference */
+    @media (prefers-color-scheme: dark) {
+      :root:not(.premium-light-theme) {
+        --primary: #00E5FF;
+        --primary-hover: #72F8FF;
+        --primary-glow: rgba(0, 229, 255, 0.4);
+        --primary-light: rgba(0, 229, 255, 0.1);
+        --accent: #38bdf8;
+        --accent-hover: #7dd3fc;
+        --accent-glow: rgba(56, 189, 248, 0.3);
+        --background: #121212;
+        --surface: #1E1E1E;
+        --surface-translucent: rgba(255, 255, 255, 0.07);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-heading: #f1f5f9;
+        --text-body: #94a3b8;
+        --text-muted: #64748b;
+        --text-inverted: #000000;
+        --border-color: rgba(255, 255, 255, 0.15);
+        --shadow-color: 0 0% 0%;
+        --shadow-sm: 0 2px 4px hsl(var(--shadow-color) / 0.3);
+        --shadow-md: 0 4px 12px hsl(var(--shadow-color) / 0.4);
+        --shadow-lg: 0 10px 30px hsl(var(--shadow-color) / 0.5);
+        --shadow-xl: 0 20px 50px hsl(var(--shadow-color) / 0.6);
+        /* Skill Category Colors */
+        --skill-color-clinical: #38bdf8;
+        --skill-color-clinical-glow: rgba(56, 189, 248, 0.5);
+        --skill-color-technical: #94a3b8;
+        --skill-color-technical-glow: rgba(148, 163, 184, 0.5);
+        --skill-color-soft: #34d399;
+        --skill-color-soft-glow: rgba(52, 211, 153, 0.5);
+        --skill-color-admin: #a78bfa;
+        --skill-color-admin-glow: rgba(167, 139, 250, 0.5);
+      }
+    }
+
+    html {
+      scroll-padding-top: 80px;
+      /* Offset for fixed header */
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--text-body);
+      /* Subtle grid background for a technical/clean feel */
+      background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(to right, var(--border-color) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-heading);
+    }
+
+    ::selection {
+      background-color: var(--primary);
+      color: var(--text-inverted);
+    }
+
+    .section-container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-container {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+      }
+    }
+
+    /* Animation for sections */
+    main>section {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* Staggered animation delays */
+    main>section:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    main>section:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    main>section:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    main>section:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    main>section:nth-child(6) {
+      animation-delay: 0.5s;
+    }
+
+    main>section:nth-child(7) {
+      animation-delay: 0.6s;
+    }
+
+    main>section:nth-child(8) {
+      animation-delay: 0.7s;
+    }
+
+    main>section:nth-child(9) {
+      animation-delay: 0.8s;
+    }
+  </style>
+  <script type="importmap">
+</script>
+</head>
+
+<body class="antialiased">
+  <app-root></app-root>
+</body>
+
+</html>

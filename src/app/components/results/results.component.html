@@ -1,0 +1,95 @@
+<section id="results" class="section-container bg-[var(--background)] border-t border-gray-300">
+
+  <div class="container mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14">
+
+      <h2 class="text-3xl md:text-4xl font-bold">
+        {{ resultsCon.header.title }}
+      </h2>
+
+      <p class="text-[var(--primary)] font-medium mt-2 text-lg">
+        {{ resultsCon.header.subtitle }}
+      </p>
+
+      <p class="text-[var(--text-body)] mt-6 max-w-3xl mx-auto leading-relaxed">
+        {{ resultsCon.intro }}
+      </p>
+
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+
+      @for(result of resultsCon.results; track result.year) {
+
+        <div
+          class="group relative overflow-hidden rounded-3xl border border-[var(--border-color)] bg-[var(--surface)] shadow-[var(--shadow-lg)] hover:-translate-y-2 transition-all duration-500"
+        >
+
+          <div
+            class="absolute top-0 right-0 w-40 h-40 bg-[var(--primary-light)] rounded-full blur-3xl opacity-60"
+          ></div>
+
+          <div class="relative p-8">
+
+            <div class="flex items-center justify-between mb-8">
+
+              <div>
+                <p class="text-sm font-semibold text-[var(--primary)] mb-1">
+                  Academic Year
+                </p>
+
+                <h3 class="text-3xl font-bold text-[var(--text-heading)]">
+                  {{ result.year }}
+                </h3>
+              </div>
+
+              <div
+                class="w-24 h-24 rounded-full bg-[var(--primary)] text-white flex items-center justify-center text-2xl font-bold shadow-xl"
+              >
+                {{ result.percentage }}
+              </div>
+
+            </div>
+
+            <h4 class="text-2xl font-bold text-[var(--text-heading)] mb-4">
+              {{ result.title }}
+            </h4>
+
+            <p class="text-[var(--text-body)] leading-relaxed">
+              {{ result.description }}
+            </p>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+    <div class="bg-[var(--surface)] border border-[var(--border-color)] rounded-3xl p-8 shadow-[var(--shadow-lg)]">
+
+      <h3 class="text-2xl font-bold text-center mb-8">
+        Result Highlights
+      </h3>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        @for(item of resultsCon.highlights; track item) {
+
+          <div
+            class="bg-[var(--primary-light)] rounded-2xl px-5 py-4 text-[var(--text-heading)] font-semibold text-center"
+          >
+            {{ item }}
+          </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

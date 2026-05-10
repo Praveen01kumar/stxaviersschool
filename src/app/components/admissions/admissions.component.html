@@ -1,0 +1,79 @@
+<section id="admissions" class="section-container bg-[var(--surface)] border-t border-gray-300">
+  <div class="container mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14">
+      <h2 class="text-3xl md:text-4xl font-bold">
+        {{ admissionsCon.header.title }}
+      </h2>
+
+      <p class="text-[var(--primary)] font-medium mt-2 text-lg">
+        {{ admissionsCon.header.subtitle }}
+      </p>
+
+      <p class="text-[var(--text-body)] mt-6 max-w-3xl mx-auto leading-relaxed">
+        {{ admissionsCon.intro }}
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 mb-14">
+
+      <div class="bg-[var(--background)] border border-[var(--border-color)] rounded-2xl p-8 shadow-[var(--shadow-md)]">
+        <h3 class="text-2xl font-bold mb-6">
+          Admission Process
+        </h3>
+
+        <div class="space-y-6">
+
+          <div
+            *ngFor="let step of admissionsCon.steps; let i = index"
+            class="flex gap-4"
+          >
+            <div class="w-10 h-10 rounded-full bg-[var(--primary)] text-white flex items-center justify-center font-bold shrink-0">
+              {{ i + 1 }}
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-lg mb-1">
+                {{ step.title }}
+              </h4>
+
+              <p class="text-[var(--text-body)]">
+                {{ step.description }}
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="bg-[var(--background)] border border-[var(--border-color)] rounded-2xl p-8 shadow-[var(--shadow-md)]">
+        <h3 class="text-2xl font-bold mb-6">
+          Required Documents
+        </h3>
+
+        <div class="grid gap-4">
+
+          <div
+            *ngFor="let item of admissionsCon.requirements"
+            class="bg-[var(--primary-light)] rounded-xl px-5 py-4 font-medium text-[var(--text-heading)]"
+          >
+            {{ item }}
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bg-[var(--primary-light)] border border-[var(--border-color)] rounded-2xl p-8 text-center">
+      <h3 class="text-2xl font-bold mb-3">
+        {{ admissionsCon.contact.title }}
+      </h3>
+
+      <p class="text-[var(--text-body)] max-w-2xl mx-auto">
+        {{ admissionsCon.contact.text }}
+      </p>
+    </div>
+
+  </div>
+</section>

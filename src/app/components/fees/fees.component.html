@@ -1,0 +1,200 @@
+<section id="fees" class="section-container bg-[var(--surface)] border-t border-gray-300">
+
+  <div class="container mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14">
+
+      <h2 class="text-3xl md:text-4xl font-bold">
+        {{ feesCon.header.title }}
+      </h2>
+
+      <p class="text-[var(--primary)] font-medium mt-2 text-lg">
+        {{ feesCon.header.subtitle }}
+      </p>
+
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8 mb-10">
+
+      <div
+        class="bg-[var(--background)] rounded-3xl border border-[var(--border-color)] shadow-[var(--shadow-lg)] p-8 hover:-translate-y-2 transition-all duration-500"
+      >
+
+        <div class="flex items-center gap-4 mb-8">
+
+          <div class="w-14 h-14 rounded-2xl bg-[var(--primary-light)] flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[var(--primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v2m0 16v2m10-10h-2M4 12H2m15.071 7.071-1.414-1.414M8.343 8.343 6.929 6.929m10.142 0-1.414 1.414M8.343 15.657l-1.414 1.414" />
+            </svg>
+          </div>
+
+          <h3 class="text-2xl font-bold">
+            School Fees
+          </h3>
+
+        </div>
+
+        <div class="space-y-5">
+
+          @for(item of feesCon.schoolFees; track item.title) {
+
+            <div class="flex items-center justify-between border-b border-[var(--border-color)] pb-3">
+
+              <p class="text-[var(--text-body)] font-medium">
+                {{ item.title }}
+              </p>
+
+              <span class="font-bold text-[var(--primary)]">
+                {{ item.amount }}
+              </span>
+
+            </div>
+
+          }
+
+        </div>
+
+      </div>
+
+      <div
+        class="bg-[var(--primary)] text-white rounded-3xl shadow-2xl p-8 relative overflow-hidden hover:-translate-y-2 transition-all duration-500"
+      >
+
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"></div>
+
+        <div class="relative">
+
+          <div class="flex items-center gap-4 mb-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a5 5 0 00-10 0v2m-2 0h14l-1 11H6L5 9z" />
+              </svg>
+            </div>
+
+            <h3 class="text-2xl font-bold">
+              Monthly Charges
+            </h3>
+
+          </div>
+
+          <div class="space-y-6">
+
+            @for(item of feesCon.monthlyCharges; track item.title) {
+
+              <div class="bg-white/10 rounded-2xl p-5">
+
+                <div class="flex items-center justify-between mb-2">
+
+                  <p class="font-semibold">
+                    {{ item.title }}
+                  </p>
+
+                  <span class="text-2xl font-bold">
+                    {{ item.amount }}
+                  </span>
+
+                </div>
+
+                <p class="text-sm text-white/80">
+                  {{ item.note }}
+                </p>
+
+              </div>
+
+            }
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div
+        class="bg-[var(--background)] rounded-3xl border border-[var(--border-color)] shadow-[var(--shadow-lg)] p-8 hover:-translate-y-2 transition-all duration-500"
+      >
+
+        <div class="flex items-center gap-4 mb-8">
+
+          <div class="w-14 h-14 rounded-2xl bg-[var(--primary-light)] flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[var(--primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 17l4 4 4-4m0-5l-4-4-4 4" />
+            </svg>
+          </div>
+
+          <h3 class="text-2xl font-bold">
+            Transport Fees
+          </h3>
+
+        </div>
+
+        <div class="space-y-5">
+
+          @for(item of feesCon.transportFees; track item.title) {
+
+            <div class="flex items-center justify-between border-b border-[var(--border-color)] pb-3">
+
+              <p class="text-[var(--text-body)] font-medium">
+                {{ item.title }}
+              </p>
+
+              <span class="font-bold text-[var(--primary)]">
+                {{ item.amount }}
+              </span>
+
+            </div>
+
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-10">
+
+      @for(item of feesCon.timing; track item.season) {
+
+        <div
+          class="bg-[var(--background)] rounded-3xl border border-[var(--border-color)] shadow-[var(--shadow-lg)] p-8 text-center"
+        >
+
+          <div
+            class="inline-flex items-center justify-center px-5 py-2 rounded-full bg-[var(--primary)] text-white font-semibold mb-5"
+          >
+            {{ item.season }}
+          </div>
+
+          <h4 class="text-2xl font-bold mb-3">
+            {{ item.months }}
+          </h4>
+
+          <p class="text-[var(--text-body)] text-lg">
+            {{ item.time }}
+          </p>
+
+        </div>
+
+      }
+
+    </div>
+
+    <div
+      class="bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-3xl p-8 text-center text-white shadow-2xl"
+    >
+
+      <h3 class="text-2xl font-bold mb-4">
+        Important Notice
+      </h3>
+
+      <p class="text-lg leading-relaxed max-w-3xl mx-auto">
+        {{ feesCon.notice }}
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
