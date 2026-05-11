@@ -4,6 +4,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 import { DownloadService } from '../../services/download.service';
+import { HEADER_SECTION_CONTENT } from '../../services/constants';
 
 interface MenuItem {
   label: string;
@@ -24,40 +25,18 @@ export class HeaderComponent {
   private scrollService = inject(ScrollService);
   private platformId = inject(PLATFORM_ID);
   private elementRef = inject(ElementRef);
-  name = 'St. Xavier’s Public School';
-
+  headerCon = HEADER_SECTION_CONTENT;
   isMenuOpen = signal(false);
   isScrolled = signal(false);
   isMoreMenuOpen = signal(false);
-
-  menuItems: MenuItem[] = [
-    { label: 'Home', id: 'home' },
-    { label: 'About', id: 'about' },
-    { label: 'Academics', id: 'academics' },
-    { label: 'Admissions', id: 'admissions' },
-    { label: 'Faculty', id: 'faculty' },
-    { label: 'Gallery', id: 'gallery' },
-    { label: 'Events', id: 'events' },
-    { label: 'Blog', id: 'blog' },
-    { label: 'Results', id: 'results' },
-    { label: 'Fees', id: 'fees' },
-    { label: 'Contact', id: 'contact' },
-  ];
-
+  menuItems: MenuItem[] = this.headerCon.menuItems;
   mainMenuItems: MenuItem[];
   moreMenuItems: MenuItem[];
-
   constructor(private download: DownloadService) {
     if (isPlatformBrowser(this.platformId)) {
       window.addEventListener('scroll', this.onScroll, { passive: true });
     }
-    const moreMenuLabels = [
-      'Faculty',
-      'Events',
-      'Blog',
-      'Results',
-      'Fees',
-    ];
+    const moreMenuLabels = this.headerCon.moreMenuLabels;
     this.mainMenuItems = this.menuItems.filter(item => !moreMenuLabels.includes(item.label));
     this.moreMenuItems = this.menuItems.filter(item => moreMenuLabels.includes(item.label));
   }
@@ -87,8 +66,8 @@ export class HeaderComponent {
   }
 
   downloadFeestructure() {
-    const path = 'assets/download_fee_structure.pdf';
-    const name = this.name;
+    const path = this.headerCon.assets.feeStructurePdf;
+    const name = this.headerCon.schoolName;
     this.download.downloadFile(path, name);
   }
 }

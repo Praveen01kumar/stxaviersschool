@@ -2,9 +2,9 @@
         (window:scroll)="onScroll()">
   <nav class="container mx-auto px-4 sm:px-6 py-4">
     <div class="flex items-center justify-between">
-      <a href="#home" (click)="$event.preventDefault(); scrollToSection('home')" class="flex items-center gap-2" aria-label="St. Xavier’s Public School">
-        <img class="h-8 w-8 text-[var(--primary)]" src="assets/logo.png" viewBox="0 0 24 24" alt="logo">
-        <span class="text-xl font-bold text-[var(--text-heading)] hidden sm:inline">{{name}}</span>
+      <a href="#home" (click)="$event.preventDefault(); scrollToSection('home')" class="flex items-center gap-2" [attr.aria-label]="headerCon.schoolName">
+        <img class="h-8 w-8 text-[var(--primary)]" [src]="headerCon.assets.logo" viewBox="0 0 24 24" alt="logo">
+        <span class="text-xl font-bold text-[var(--text-heading)] hidden sm:inline">{{ headerCon.buttons.feesStructure }}</span>
       </a>
 
       <!-- Desktop Menu -->
@@ -34,7 +34,7 @@
               </button>
               <div class="border-t border-[var(--border-color)] mx-2 my-2"></div>
               <div class="px-4 py-1 flex items-center justify-between">
-                <span class="text-sm text-[var(--text-muted)] font-medium">Theme</span>
+                <span class="text-sm text-[var(--text-muted)] font-medium"> {{ headerCon.buttons.theme }}</span>
                 <app-theme-toggle></app-theme-toggle>
               </div>
             </div>

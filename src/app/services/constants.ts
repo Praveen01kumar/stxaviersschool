@@ -1,3 +1,33 @@
+export const schoolName = 'St. Xavier’s Public School';
+export const schoolMail = 'bm000543@gmail.com';
+export const HEADER_SECTION_CONTENT = {
+  schoolName: schoolName,
+  menuItems: [
+    { label: 'Home', id: 'home' },
+    { label: 'About', id: 'about' },
+    { label: 'Academics', id: 'academics' },
+    { label: 'Admissions', id: 'admissions' },
+    { label: 'Faculty', id: 'faculty' },
+    { label: 'Gallery', id: 'gallery' },
+    { label: 'Events', id: 'events' },
+    { label: 'Blog', id: 'blog' },
+    { label: 'Results', id: 'results' },
+    { label: 'Fees', id: 'fees' },
+    { label: 'Contact', id: 'contact' },
+  ],
+
+  moreMenuLabels: ['Faculty', 'Events', 'Blog', 'Results', 'Fees'],
+
+  buttons: {
+    feesStructure: 'Fees Structure',
+    theme: 'Theme',
+  },
+
+  assets: {
+    logo: 'assets/logo.png',
+    feeStructurePdf: 'assets/download_fee_structure.pdf',
+  },
+};
 export const ABOUT_SECTION_CONTENT = {
   header: {
     title: 'About Our School',
@@ -6,7 +36,7 @@ export const ABOUT_SECTION_CONTENT = {
 
   leftc: {
     mainHeading: 'Dedicated to Academic Excellence and Student Development',
-    description: `St. Xavier's Public School is committed to delivering quality education 
+    description: `${schoolName} is committed to delivering quality education 
     in a nurturing and disciplined environment. Our institution focuses on building strong 
     academic foundations, moral values, creativity, leadership, and confidence among students. 
     We strive to create responsible individuals prepared to excel in every stage of life.`,
@@ -35,8 +65,8 @@ export const ABOUT_SECTION_CONTENT = {
   quickProfile: {
     title: 'Quick Information',
     Profile: [
-      { title: 'School Name:', value: "St. Xavier's Public School" },
-      { title: 'Location:', value: 'Supaul, Bihar' },
+      { title: 'School Name:', value: schoolName },
+      { title: 'Location:', value: 'Supaul, Thakurbari Road, Ward no.- 26, Bihar, India.' },
       { title: 'Medium:', value: 'English Medium' },
       { title: 'Focus:', value: 'Academic & Holistic Development' },
       { title: 'Activities:', value: 'Sports, Cultural & Co-curricular Activities' },
@@ -45,7 +75,6 @@ export const ABOUT_SECTION_CONTENT = {
   },
 
 };
-
 export const ACADEMICS_SECTION_CONTENT = {
   header: {
     title: 'Academics',
@@ -405,7 +434,7 @@ export const CONTACT_SECTION_CONTENT = {
 
   contactDetails: {
     phone: '+91 8757805509, 9122122615, 9431890566',
-    email: 'bm000543@gmail.com',
+    email: schoolMail,
     location: 'Supaul, Thakurbari Road, Ward no.- 26, Bihar, India.',
   },
 
@@ -427,4 +456,15 @@ export const CONTACT_SECTION_CONTENT = {
     SERVICE_ID: 'service_x23ky4n',
     TEMPLATE_ID: 'template_nyw3s6k',
   },
+};
+export const FOOTER_SECTION_CONTENT = {
+  profile: {
+    name: schoolName,
+    email: `mailto:${schoolMail}`,
+  },
+
+  copyrightText: 'All Rights Reserved.',
+
+  description:
+    'Designed with care to reflect professional dedication.',
 };

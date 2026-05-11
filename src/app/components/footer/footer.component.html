@@ -2,11 +2,11 @@
   <div class="container mx-auto px-4 sm:px-6">
     <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
       <div class="text-sm text-[var(--text-muted)] text-center sm:text-left">
-        <p>&copy; {{ currentYear }} {{profile.name}}. All Rights Reserved.</p>
-        <p>Designed with care to reflect professional dedication.</p>
+        <p> &copy; {{ currentYear }} {{ footerCon.profile.name }} {{ footerCon.copyrightText }}</p>
+        <p>{{ footerCon.description }}</p>
       </div>
       <div class="flex justify-center items-center space-x-4">
-        <a href="{{profile.email}}" target="_blank" class="text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors" aria-label="Email">
+        <a href="{{footerCon.profile.email}}" target="_blank" class="text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors" aria-label="Email">
            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
         </a>
         <a (click)="$event.preventDefault(); scrollTo('home')" href="#home" class="text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors p-2 bg-[var(--border-color)] rounded-full" aria-label="Scroll to top">

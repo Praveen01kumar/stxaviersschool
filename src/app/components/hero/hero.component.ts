@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ScrollService } from '../../services/scroll.service';
+import { schoolName } from '../../services/constants';
 
 @Component({
   standalone: true,
@@ -8,7 +9,7 @@ import { ScrollService } from '../../services/scroll.service';
 })
 export class HeroComponent {
   private scrollService = inject(ScrollService);
-  schoolName = "St. Xavier's Public School, Supaul";
+  schoolName = schoolName;
 
   scrollTo(id: string) {
     this.scrollService.scrollTo(id);

@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ScrollService } from '../../services/scroll.service';
+import { FOOTER_SECTION_CONTENT } from '../../services/constants';
 
 @Component({
   standalone: true,
@@ -9,11 +10,7 @@ import { ScrollService } from '../../services/scroll.service';
 export class FooterComponent {
   private scrollService = inject(ScrollService);
   currentYear: number;
-  profile={
-    name: `St. Xavier's Public School`,
-    email:'mailto:bm000543@gmail.com'
-  }
-
+  footerCon = FOOTER_SECTION_CONTENT;
   constructor() {
     this.currentYear = new Date().getFullYear();
   }
