@@ -1,61 +1,40 @@
 <section id="events" class="section-container bg-[var(--background)] border-t border-gray-300">
-
   <div class="container mx-auto px-4 sm:px-6">
-
     <div class="text-center mb-14">
-
       <h2 class="text-3xl md:text-4xl font-bold">
         {{ eventsCon.header.title }}
       </h2>
-
       <p class="text-[var(--primary)] font-medium mt-2 text-lg">
         {{ eventsCon.header.subtitle }}
       </p>
-
     </div>
-
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
       @for(event of eventsCon.events; track event.title) {
-
         <div
           class="group overflow-hidden rounded-3xl bg-[var(--surface)] border border-[var(--border-color)] shadow-[var(--shadow-lg)] hover:-translate-y-2 transition-all duration-500"
         >
-
           <div class="relative overflow-hidden">
-
             <img
               [src]="event.imageUrl"
               [alt]="event.title"
               class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
             >
-
             <div
               class="absolute top-4 left-4 bg-[var(--primary)] text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg"
             >
               {{ event.date }}
             </div>
-
           </div>
-
           <div class="p-7">
-
             <h3 class="text-2xl font-bold text-[var(--text-heading)] mb-4">
               {{ event.title }}
             </h3>
-
             <p class="text-[var(--text-body)] leading-relaxed">
               {{ event.description }}
             </p>
-
           </div>
-
         </div>
-
       }
-
     </div>
-
   </div>
-
 </section>

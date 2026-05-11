@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { CONTACT_SECTION_CONTENT } from '../../services/constants';
 
 @Component({
   standalone: true,
@@ -9,16 +10,11 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
   imports: [ReactiveFormsModule]
 })
 export class ContactComponent {
+  contactCon = CONTACT_SECTION_CONTENT;
   contactForm: FormGroup;
-  USER_ID: string = "PvTkPcd3Zd3pVehUs";
-  SERVICE_ID: string = "service_x23ky4n";
-  TEMPLATE_ID: string = "template_nyw3s6k";
-  contact = {
-    phone: '+91 9876543210',
-    email: 'bm000543@gmail.com',
-    location: 'Supaul, Bihar, India'
-  }
-
+  USER_ID: string = this.contactCon.emailJs.USER_ID;
+  SERVICE_ID: string = this.contactCon.emailJs.SERVICE_ID;
+  TEMPLATE_ID: string = this.contactCon.emailJs.TEMPLATE_ID;
   constructor(private fb: FormBuilder) {
     emailjs.init(this.USER_ID);
     this.contactForm = this.fb.group({
@@ -37,11 +33,11 @@ export class ContactComponent {
       emailjs.send(this.SERVICE_ID, this.TEMPLATE_ID, payload).then((response: EmailJSResponseStatus) => {
         if (response?.status === 200) {
           this.contactForm.reset();
-          alert('Your message has been sent successfully!');
+          alert(this.contactCon.form.alerts.success);
         }
       }, (error) => { alert(error); });
     } else {
-      alert('Please fill out the form correctly');
+      alert(this.contactCon.form.alerts.invalid);
     }
   }
 

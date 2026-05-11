@@ -1,91 +1,93 @@
 export const ABOUT_SECTION_CONTENT = {
-    header: {
-        title: 'About Our School',
-        subtitle: 'Our Journey and Vision in Education',
-    },
+  header: {
+    title: 'About Our School',
+    subtitle: 'Our Journey and Vision in Education',
+  },
 
-    leftc: {
-        mainHeading: 'Dedicated to Academic Excellence and Student Development',
-        description: `St. Xavier's Public School is committed to delivering quality education 
+  leftc: {
+    mainHeading: 'Dedicated to Academic Excellence and Student Development',
+    description: `St. Xavier's Public School is committed to delivering quality education 
     in a nurturing and disciplined environment. Our institution focuses on building strong 
     academic foundations, moral values, creativity, leadership, and confidence among students. 
     We strive to create responsible individuals prepared to excel in every stage of life.`,
 
-        career: {
-            title: 'Our Mission',
-            text: `To provide value-based and holistic education that inspires students to 
+    career: {
+      title: 'Our Mission',
+      text: `To provide value-based and holistic education that inspires students to 
       achieve academic excellence, develop critical thinking, and become responsible citizens 
       of society.`,
-        },
-
-        philosophy: {
-            title: 'Our Educational Philosophy',
-            parts: [
-                { text: 'We believe every child deserves an environment that encourages ' },
-                { text: 'learning', highlight: true },
-                { text: ', builds strong ' },
-                { text: 'character', highlight: true },
-                { text: ', and promotes lifelong ' },
-                { text: 'growth', highlight: true },
-                { text: ' through quality education and positive values.' }
-            ]
-        }
     },
 
-    quickProfile: {
-        title: 'Quick Information',
-        Profile: [
-            { title: 'School Name:', value: "St. Xavier's Public School" },
-            { title: 'Location:', value: 'Supaul, Bihar' },
-            { title: 'Medium:', value: 'English Medium' },
-            { title: 'Focus:', value: 'Academic & Holistic Development' },
-            { title: 'Activities:', value: 'Sports, Cultural & Co-curricular Activities' },
-            { title: 'Environment:', value: 'Safe, Disciplined & Student-Friendly' },
-        ]
-    },
+    philosophy: {
+      title: 'Our Educational Philosophy',
+      parts: [
+        { text: 'We believe every child deserves an environment that encourages ' },
+        { text: 'learning', highlight: true },
+        { text: ', builds strong ' },
+        { text: 'character', highlight: true },
+        { text: ', and promotes lifelong ' },
+        { text: 'growth', highlight: true },
+        { text: ' through quality education and positive values.' }
+      ]
+    }
+  },
+
+  quickProfile: {
+    title: 'Quick Information',
+    Profile: [
+      { title: 'School Name:', value: "St. Xavier's Public School" },
+      { title: 'Location:', value: 'Supaul, Bihar' },
+      { title: 'Medium:', value: 'English Medium' },
+      { title: 'Focus:', value: 'Academic & Holistic Development' },
+      { title: 'Activities:', value: 'Sports, Cultural & Co-curricular Activities' },
+      { title: 'Environment:', value: 'Safe, Disciplined & Student-Friendly' },
+    ]
+  },
 
 };
 
 export const ACADEMICS_SECTION_CONTENT = {
-    header: {
-        title: 'Academics',
-        subtitle: 'Quality Education from Class 1 to 10',
+  header: {
+    title: 'Academics',
+    subtitle: 'Quality Education from Pre-Primary to Class VIII',
+  },
+
+  intro:
+    "Our academic curriculum is designed to provide strong conceptual learning, discipline, creativity, and overall development for students from primary to secondary level.",
+
+
+
+  sections: [
+    {
+      title: 'Pre-Primary Education',
+      classes: 'Play to U.Kg.',
+      description:
+        'Focus on foundational learning, communication skills, creativity, and interactive classroom activities for young learners.',
     },
 
-    intro:
-        "Our academic curriculum is designed to provide strong conceptual learning, discipline, creativity, and overall development for students from primary to secondary level.",
+    {
+      title: 'Primary Education',
+      classes: 'Class 1 - 5',
+      description:
+        'Focus on foundational learning, communication skills, creativity, and interactive classroom activities for young learners.',
+    },
 
-    sections: [
-        {
-            title: 'Primary Education',
-            classes: 'Class 1 - 5',
-            description:
-                'Focus on foundational learning, communication skills, creativity, and interactive classroom activities for young learners.',
-        },
+    {
+      title: 'Middle School Education',
+      classes: 'Class 6 - 8',
+      description:
+        'Encouraging analytical thinking, subject understanding, practical learning, and participation in co-curricular activities.',
+    },
+  ],
 
-        {
-            title: 'Middle School Education',
-            classes: 'Class 6 - 8',
-            description:
-                'Encouraging analytical thinking, subject understanding, practical learning, and participation in co-curricular activities.',
-        },
-
-        {
-            title: 'Secondary Education',
-            classes: 'Class 9 - 10',
-            description:
-                'Comprehensive academic preparation with strong focus on board examinations, discipline, leadership, and career readiness.',
-        },
-    ],
-
-    highlights: [
-        'Experienced Teaching Staff',
-        'Smart Learning Environment',
-        'Regular Assessments & Exams',
-        'Sports & Cultural Activities',
-        'Student-Centered Learning',
-        'Focus on Moral Values & Discipline',
-    ],
+  highlights: [
+    'Experienced Teaching Staff',
+    'Smart Learning Environment',
+    'Regular Assessments & Exams',
+    'Sports & Cultural Activities',
+    'Student-Centered Learning',
+    'Focus on Moral Values & Discipline',
+  ],
 };
 export const ADMISSIONS_SECTION_CONTENT = {
   header: {
@@ -144,50 +146,21 @@ export const FACULTY_SECTION_CONTENT = {
 
   faculty: [
     {
-      name: 'Rahul Sharma',
-      role: 'Primary Section Teacher',
+      name: 'Mr. Baiju Mathew',
+      role: 'Director',
       description:
-        'Focused on developing foundational skills, creativity, discipline, and confidence among young learners.',
-      imageUrl: 'assets/7.jpeg',
+        'Providing visionary leadership and guidance for the overall growth and development of the institution.',
+      imageUrl: 'assets/faculty_1.jpeg',
+      phone: '8757805509',
     },
 
     {
-      name: 'Priya Verma',
-      role: 'Middle Section Teacher',
+      name: 'Bina Kumari',
+      role: 'Principal',
       description:
-        'Encouraging analytical thinking, practical learning, and active classroom participation for student growth.',
-      imageUrl: 'assets/7.jpeg',
-    },
-
-    {
-      name: 'Amit Kumar',
-      role: 'Secondary Section Teacher',
-      description:
-        'Providing strong academic guidance, board exam preparation, and career-oriented mentorship.',
-      imageUrl: 'assets/7.jpeg',
-    },
-    {
-      name: 'Rahul Sharma',
-      role: 'Primary Section Teacher',
-      description:
-        'Focused on developing foundational skills, creativity, discipline, and confidence among young learners.',
-      imageUrl: 'assets/7.jpeg',
-    },
-
-    {
-      name: 'Priya Verma',
-      role: 'Middle Section Teacher',
-      description:
-        'Encouraging analytical thinking, practical learning, and active classroom participation for student growth.',
-      imageUrl: 'assets/7.jpeg',
-    },
-
-    {
-      name: 'Amit Kumar',
-      role: 'Secondary Section Teacher',
-      description:
-        'Providing strong academic guidance, board exam preparation, and career-oriented mentorship.',
-      imageUrl: 'assets/7.jpeg',
+        'Leading academic excellence with focus on discipline, quality education, and student development.',
+      imageUrl: 'assets/faculty_2.jpeg',
+      phone: '9113183802',
     },
   ],
 };
@@ -305,31 +278,7 @@ export const RESULTS_SECTION_CONTENT = {
   intro:
     'Our students consistently achieve excellent academic performance through dedication, discipline, and quality education.',
 
-  results: [
-    {
-      year: '2025',
-      percentage: '98%',
-      title: 'Board Examination Result',
-      description:
-        'Outstanding academic performance with excellent student achievements in secondary board examinations.',
-    },
-
-    {
-      year: '2024',
-      percentage: '95%',
-      title: 'Overall School Performance',
-      description:
-        'Students demonstrated strong academic growth, discipline, and participation across all subjects.',
-    },
-
-    {
-      year: '2023',
-      percentage: '96%',
-      title: 'Class 10 Achievement',
-      description:
-        'Exceptional board results showcasing academic excellence and consistent student dedication.',
-    },
-  ],
+  results: [],
 
   highlights: [
     'Excellent Board Results',
@@ -406,76 +355,76 @@ export const FEES_SECTION_CONTENT = {
     'School fees must be deposited in advance before the 10th of every month.',
 };
 export const CERTIFICATIONS_SECTION_CONTENT = {
-    header: {
-        title: 'Certificates',
-        subtitle: 'My professional credentials',
-    },
+  header: {
+    title: 'Certificates',
+    subtitle: 'My professional credentials',
+  },
 
-    certificates: [
-        {
-            title: 'Basic Life Support (BLS)',
-            issuer: 'Certified Body',
-            imageUrl: 'https://picsum.photos/400/250?random=1',
-        },
-        {
-            title: 'First Aid Certification',
-            issuer: 'Certified Body',
-            imageUrl: 'https://picsum.photos/400/250?random=2',
-        },
-        {
-            title: 'Clinical Training Completion',
-            issuer: 'Nursing College',
-            imageUrl: 'https://picsum.photos/400/250?random=3',
-        },
-        {
-            title: 'Community Health Training',
-            issuer: 'Health Department',
-            imageUrl: 'https://picsum.photos/400/250?random=4',
-        },
-        {
-            title: 'Covid Duty Certificate',
-            issuer: 'Government Hospital',
-            imageUrl: 'https://picsum.photos/400/250?random=5',
-        },
-    ],
+  certificates: [
+    {
+      title: 'Basic Life Support (BLS)',
+      issuer: 'Certified Body',
+      imageUrl: 'https://picsum.photos/400/250?random=1',
+    },
+    {
+      title: 'First Aid Certification',
+      issuer: 'Certified Body',
+      imageUrl: 'https://picsum.photos/400/250?random=2',
+    },
+    {
+      title: 'Clinical Training Completion',
+      issuer: 'Nursing College',
+      imageUrl: 'https://picsum.photos/400/250?random=3',
+    },
+    {
+      title: 'Community Health Training',
+      issuer: 'Health Department',
+      imageUrl: 'https://picsum.photos/400/250?random=4',
+    },
+    {
+      title: 'Covid Duty Certificate',
+      issuer: 'Government Hospital',
+      imageUrl: 'https://picsum.photos/400/250?random=5',
+    },
+  ],
 };
 export const CONTACT_SECTION_CONTENT = {
-    header: {
-        title: 'Get In Touch',
-        subtitle: "I'm open to new opportunities and collaborations.",
-    },
+  header: {
+    title: 'Contact Our School',
+    subtitle: "We are here to assist you with admissions and school-related inquiries.",
+  },
 
-    infoCard: {
-        title: 'Contact Information',
-        labels: {
-            phone: 'Phone',
-            email: 'Email',
-            location: 'Location',
-        },
+  infoCard: {
+    title: 'Contact Information',
+    labels: {
+      phone: 'School Phone',
+      email: 'School Email',
+      location: 'School Location',
     },
+  },
 
-    contactDetails: {
-        phone: '+91 9876543210',
-        email: 'bm000543@gmail.com',
-        location: 'Mohali, India',
-    },
+  contactDetails: {
+    phone: '+91 8757805509, 9122122615, 9431890566',
+    email: 'bm000543@gmail.com',
+    location: 'Supaul, Thakurbari Road, Ward no.- 26, Bihar, India.',
+  },
 
-    form: {
-        placeholders: {
-            name: 'Your Name',
-            email: 'Your Email',
-            message: 'Your Message',
-        },
-        submitButton: 'Send Message',
-        alerts: {
-            success: 'Your message has been sent successfully!',
-            invalid: 'Please fill out the form correctly',
-        },
+  form: {
+    placeholders: {
+      name: 'Parent / Guardian Name',
+      email: 'Parent Email Address',
+      message: 'Write your admission or school inquiry here...',
     },
+    submitButton: 'Submit Inquiry',
+    alerts: {
+      success: 'Your message has been sent successfully!',
+      invalid: 'Please fill out the form correctly',
+    },
+  },
 
-    emailJs: {
-        USER_ID: 'PvTkPcd3Zd3pVehUs',
-        SERVICE_ID: 'service_x23ky4n',
-        TEMPLATE_ID: 'template_nyw3s6k',
-    },
+  emailJs: {
+    USER_ID: 'PvTkPcd3Zd3pVehUs',
+    SERVICE_ID: 'service_x23ky4n',
+    TEMPLATE_ID: 'template_nyw3s6k',
+  },
 };
