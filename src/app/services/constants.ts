@@ -210,7 +210,7 @@ export const GALLERY_SECTION_CONTENT = {
     },
     {
       title: 'Science Activity',
-      imageUrl: 'assets/3.jpeg',
+      imageUrl: 'assets/1.jpeg',
     },
     {
       title: 'Sports Activities',
@@ -254,7 +254,7 @@ export const EVENTS_SECTION_CONTENT = {
       date: 'August 2026',
       description:
         'Students showcase innovative science models, experiments, and creative projects to enhance practical learning.',
-      imageUrl: 'assets/3.jpeg',
+      imageUrl: 'assets/1.jpeg',
     },
 
     {
@@ -294,7 +294,7 @@ export const BLOG_SECTION_CONTENT = {
       date: '28 April 2026',
       description:
         'Interactive learning methods and classroom activities make education engaging and effective for students.',
-      imageUrl: 'assets/3.jpeg',
+      imageUrl: 'assets/1.jpeg',
     },
   ],
 };
