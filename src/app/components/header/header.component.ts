@@ -67,7 +67,7 @@ export class HeaderComponent {
 
   downloadFeestructure() {
     const path = this.headerCon.assets.feeStructurePdf;
-    const name = this.headerCon.schoolName;
+    const name = this.headerCon.assets.exportedName;
     this.download.downloadFile(path, name);
   }
 }

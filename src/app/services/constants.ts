@@ -26,6 +26,7 @@ export const HEADER_SECTION_CONTENT = {
   assets: {
     logo: 'assets/logo.png',
     feeStructurePdf: 'assets/download_fee_structure.pdf',
+    exportedName:'fee_structure'
   },
 };
 export const ABOUT_SECTION_CONTENT = {
