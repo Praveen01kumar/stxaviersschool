@@ -179,7 +179,7 @@ export const FACULTY_SECTION_CONTENT = {
       role: 'Director',
       description:
         'Providing visionary leadership and guidance for the overall growth and development of the institution.',
-      imageUrl: 'assets/faculty_1.jpeg',
+      imageUrl: 'assets/faculty_1.webp',
       phone: '8757805509',
     },
 
@@ -188,7 +188,7 @@ export const FACULTY_SECTION_CONTENT = {
       role: 'Principal',
       description:
         'Leading academic excellence with focus on discipline, quality education, and student development.',
-      imageUrl: 'assets/faculty_2.jpeg',
+      imageUrl: 'assets/faculty_2.webp',
       phone: '9113183802',
     },
   ],
@@ -202,27 +202,27 @@ export const GALLERY_SECTION_CONTENT = {
   images: [
     {
       title: 'School Campus',
-      imageUrl: 'assets/1.jpeg',
+      imageUrl: 'assets/1.webp',
     },
     {
       title: 'Classroom Learning',
-      imageUrl: 'assets/2.jpeg',
+      imageUrl: 'assets/2.webp',
     },
     {
       title: 'Science Activity',
-      imageUrl: 'assets/1.jpeg',
+      imageUrl: 'assets/1.webp',
     },
     {
       title: 'Sports Activities',
-      imageUrl: 'assets/4.jpeg',
+      imageUrl: 'assets/4.webp',
     },
     {
       title: 'Annual Function',
-      imageUrl: 'assets/5.jpeg',
+      imageUrl: 'assets/5.webp',
     },
     {
       title: 'Cultural Program',
-      imageUrl: 'assets/6.jpeg',
+      imageUrl: 'assets/6.webp',
     },
   ],
 };
@@ -238,7 +238,7 @@ export const EVENTS_SECTION_CONTENT = {
       date: 'December 2026',
       description:
         'A grand cultural celebration featuring student performances, awards, music, dance, and creative activities.',
-      imageUrl: 'assets/1.jpeg',
+      imageUrl: 'assets/1.webp',
     },
 
     {
@@ -246,7 +246,7 @@ export const EVENTS_SECTION_CONTENT = {
       date: 'January 2026',
       description:
         'Encouraging teamwork, fitness, discipline, and sportsmanship through various indoor and outdoor competitions.',
-      imageUrl: 'assets/2.jpeg',
+      imageUrl: 'assets/2.webp',
     },
 
     {
@@ -254,7 +254,7 @@ export const EVENTS_SECTION_CONTENT = {
       date: 'August 2026',
       description:
         'Students showcase innovative science models, experiments, and creative projects to enhance practical learning.',
-      imageUrl: 'assets/1.jpeg',
+      imageUrl: 'assets/1.webp',
     },
 
     {
@@ -262,7 +262,7 @@ export const EVENTS_SECTION_CONTENT = {
       date: '15 August 2026',
       description:
         'Patriotic performances, speeches, and activities promoting national pride and cultural values.',
-      imageUrl: 'assets/4.jpeg',
+      imageUrl: 'assets/4.webp',
     },
   ],
 };
@@ -278,7 +278,7 @@ export const BLOG_SECTION_CONTENT = {
       date: '12 May 2026',
       description:
         'Holistic education helps students grow academically, emotionally, socially, and ethically for a successful future.',
-      imageUrl: 'assets/1.jpeg',
+      imageUrl: 'assets/1.webp',
     },
 
     {
@@ -286,7 +286,7 @@ export const BLOG_SECTION_CONTENT = {
       date: '05 May 2026',
       description:
         'Sports activities improve discipline, teamwork, physical fitness, and confidence among students.',
-      imageUrl: 'assets/2.jpeg',
+      imageUrl: 'assets/2.webp',
     },
 
     {
@@ -294,7 +294,7 @@ export const BLOG_SECTION_CONTENT = {
       date: '28 April 2026',
       description:
         'Interactive learning methods and classroom activities make education engaging and effective for students.',
-      imageUrl: 'assets/1.jpeg',
+      imageUrl: 'assets/1.webp',
     },
   ],
 };
@@ -456,6 +456,12 @@ export const CONTACT_SECTION_CONTENT = {
     SERVICE_ID: 'service_x23ky4n',
     TEMPLATE_ID: 'template_nyw3s6k',
   },
+  map: {
+    title: 'Find Us on Map',
+    embedLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.90661650261347!2d86.60122840242303!3d26.115044257875606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ee423e19ccfefd%3A0xca454c0c6cc3546!2sSt.%20Xaviers%20Public%20School!5e0!3m2!1sen!2sin!4v1778556067088!5m2!1sen!2sin',
+    openLink: 'https://maps.google.com/?q=4J82+2FG, Thakur Bari Rd, Supaul, Bihar 852131',
+    button:'Open in Google Maps'
+  }
 };
 export const FOOTER_SECTION_CONTENT = {
   profile: {

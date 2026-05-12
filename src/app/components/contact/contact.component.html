@@ -95,5 +95,27 @@
         </form>
       </div>
     </div>
+    <div
+      class="max-w-5xl mx-auto mt-10 bg-[var(--surface)] p-4 md:p-6 rounded-2xl shadow-[var(--shadow-lg)] border border-[var(--border-color)]">
+      <h3 class="text-2xl font-bold text-[var(--text-heading)] mb-5 text-center">
+        {{ contactCon.map.title }}
+      </h3>
+      <div class="w-full h-[300px] md:h-[400px] overflow-hidden rounded-xl border border-[var(--border-color)]">
+        <iframe class="w-full h-full" [src]="safeMapUrl" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"> </iframe>
+      </div>
+      <div class="text-center mt-5">
+        <a [href]="contactCon.map.openLink" target="_blank"
+          class="inline-flex items-center gap-2 bg-[var(--primary)] hover:bg-[var(--accent)] text-white px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-[var(--shadow-md)]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          {{contactCon.map.button}}
+        </a>
+      </div>
+    </div>
   </div>
 </section>

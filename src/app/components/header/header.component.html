@@ -4,7 +4,7 @@
     <div class="flex items-center justify-between">
       <a href="#home" (click)="$event.preventDefault(); scrollToSection('home')" class="flex items-center gap-2" [attr.aria-label]="headerCon.schoolName">
         <img class="h-8 w-8 text-[var(--primary)]" [src]="headerCon.assets.logo" viewBox="0 0 24 24" alt="logo">
-        <span class="text-xl font-bold text-[var(--text-heading)] hidden sm:inline">{{ headerCon.buttons.feesStructure }}</span>
+        <span class="text-xl font-bold text-[var(--text-heading)] hidden sm:inline">{{ headerCon.schoolName }}</span>
       </a>
 
       <!-- Desktop Menu -->
@@ -60,12 +60,12 @@
     <!-- Mobile Menu -->
     @if (isMenuOpen()) {
       <div class="md:hidden mt-4 bg-[var(--surface)] rounded-lg shadow-[var(--shadow-xl)] border border-[var(--border-color)]">
-        <div class="flex flex-col items-center py-4 space-y-4">
+        <div class="flex flex-col items-center py-4 space-y-3">
           @for (item of menuItems; track item.id) {
             <a href="#{{item.id}}" (click)="$event.preventDefault(); scrollToSection(item.id)"
-               class="text-[var(--text-body)] hover:text-[var(--primary)] font-medium transition-colors px-4 py-2 rounded-md">{{ item.label }}</a>
+               class="text-[var(--text-body)] hover:text-[var(--primary)] font-medium transition-colors px-4 py-1 rounded-md">{{ item.label }}</a>
           }
-           <button (click)="downloadFeestructure()" class="bg-[var(--accent)] text-white px-6 py-2 rounded-full font-semibold hover:bg-[var(--accent-hover)] transition-transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2">
+           <button (click)="downloadFeestructure()" class="bg-[var(--accent)] text-white px-6 py-1 rounded-full font-semibold hover:bg-[var(--accent-hover)] transition-transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2">
              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
