@@ -28,6 +28,7 @@ export const HEADER_SECTION_CONTENT = {
     feeStructurePdf: 'assets/download_fee_structure.pdf',
     exportedName:'fee_structure'
   },
+  imageAlt:`Students studying at ${schoolName}`
 };
 export const ABOUT_SECTION_CONTENT = {
   header: {
@@ -211,7 +212,7 @@ export const GALLERY_SECTION_CONTENT = {
     },
     {
       title: 'Science Activity',
-      imageUrl: 'assets/1.webp',
+      imageUrl: 'assets/3.webp',
     },
     {
       title: 'Sports Activities',
@@ -255,7 +256,7 @@ export const EVENTS_SECTION_CONTENT = {
       date: 'August 2026',
       description:
         'Students showcase innovative science models, experiments, and creative projects to enhance practical learning.',
-      imageUrl: 'assets/1.webp',
+      imageUrl: 'assets/3.webp',
     },
 
     {
@@ -295,7 +296,7 @@ export const BLOG_SECTION_CONTENT = {
       date: '28 April 2026',
       description:
         'Interactive learning methods and classroom activities make education engaging and effective for students.',
-      imageUrl: 'assets/1.webp',
+      imageUrl: 'assets/3.webp',
     },
   ],
 };

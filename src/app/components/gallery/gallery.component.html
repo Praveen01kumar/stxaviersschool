@@ -16,7 +16,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      @for(image of galleryCon.images; track image.imageUrl; let i = $index) {
+      @for(image of galleryCon.images; track $index; let i = $index) {
 
         <div
           class="group relative overflow-hidden rounded-3xl border border-[var(--border-color)] shadow-[var(--shadow-lg)] bg-[var(--background)]"
@@ -26,7 +26,7 @@
 
             <img
               [src]="image.imageUrl"
-              [alt]="image.title"
+              [alt]="image.title" loading="lazy" decoding="async" fetchpriority="high"
               class="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
             >
 

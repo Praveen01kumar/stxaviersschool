@@ -1,5 +1,5 @@
-import { Component, computed, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, computed, inject, PLATFORM_ID, signal } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FACULTY_SECTION_CONTENT } from '../../services/constants';
 
 @Component({
@@ -11,6 +11,7 @@ import { FACULTY_SECTION_CONTENT } from '../../services/constants';
 export class FacultyComponent {
 
   facultyCon = FACULTY_SECTION_CONTENT;
+  private platformId = inject(PLATFORM_ID);
 
   currentIndex = signal(0);
 
@@ -19,7 +20,9 @@ export class FacultyComponent {
   intervalId?: ReturnType<typeof setInterval>;
 
   ngOnInit() {
+      if (isPlatformBrowser(this.platformId)) {
     this.startAutoplay();
+  }
   }
 
   ngOnDestroy() {

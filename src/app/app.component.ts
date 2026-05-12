@@ -1,4 +1,4 @@
-import { Component, effect, inject, PLATFORM_ID } from '@angular/core';
+import { Component, inject, PLATFORM_ID } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
@@ -16,38 +16,27 @@ import { BlogComponent } from './components/blog/blog.component';
 import { ResultsComponent } from './components/results/results.component';
 import { FeesComponent } from './components/fees/fees.component';
 export type Theme = 'light' | 'dark' | 'system';
+import { Meta, Title } from '@angular/platform-browser';
+import { schoolName } from './services/constants';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    HeroComponent,
-    AboutComponent,
-    ContactComponent,
-    FooterComponent,
-    AcademicsComponent,
-    AdmissionsComponent,
-    FacultyComponent,
-    GalleryComponent,
-    EventsComponent,
-    BlogComponent,
-    ResultsComponent,
-    FeesComponent
-  ],
+  imports: [RouterOutlet, HeaderComponent, HeroComponent, AboutComponent, ContactComponent, FooterComponent, AcademicsComponent, AdmissionsComponent, FacultyComponent, GalleryComponent, EventsComponent, BlogComponent, ResultsComponent, FeesComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
   private platformId = inject(PLATFORM_ID);
   themeService = inject(ThemeService);
+  private title = inject(Title);
+  private meta = inject(Meta);
   constructor() {
+    this.title.setTitle(schoolName);
+    this.meta.updateTag({ name: 'description', content: 'Quality education with academic excellence.' });
     if (isPlatformBrowser(this.platformId)) {
-      effect(() => {
-        const theme = this.getInitialTheme();
-        localStorage.setItem('theme', theme);
-        this.themeService.updateDOM(theme);
-      });
+      const theme = this.getInitialTheme();
+      localStorage.setItem('theme', theme);
+      this.themeService.updateDOM(theme);
     }
   }
 

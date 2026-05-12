@@ -25,7 +25,7 @@
             <div
               class="relative bg-[var(--surface-translucent)] backdrop-blur-sm p-8 h-full min-h-[320px] flex flex-col justify-center">
               <div class="flex justify-center mb-6">
-                <img [src]="member.imageUrl" [alt]="member.name"
+                <img [src]="member.imageUrl" [alt]="member.name" loading="lazy" decoding="async" fetchpriority="high"
                   class="w-28 h-28 rounded-full object-cover border-4 border-[var(--primary)] shadow-[var(--shadow-md)]">
 
               </div>

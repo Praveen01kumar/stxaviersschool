@@ -9,14 +9,14 @@
       </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      @for(event of eventsCon.events; track event.title) {
+      @for(event of eventsCon.events; track $index) {
         <div
           class="group overflow-hidden rounded-3xl bg-[var(--surface)] border border-[var(--border-color)] shadow-[var(--shadow-lg)] hover:-translate-y-2 transition-all duration-500"
         >
           <div class="relative overflow-hidden">
             <img
               [src]="event.imageUrl"
-              [alt]="event.title"
+              [alt]="event.title" loading="lazy" decoding="async" fetchpriority="high"
               class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
             >
             <div
