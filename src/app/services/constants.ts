@@ -38,7 +38,7 @@ export const ABOUT_SECTION_CONTENT = {
 
   leftc: {
     mainHeading: 'Dedicated to Academic Excellence and Student Development',
-    description: `${schoolName} is committed to delivering quality education 
+    description: `${schoolName} is one of the leading schools in Supaul providing quality English medium education from Play Group to Class 8. We focus on academic excellence, moral values, discipline, and holistic development of every child. ${schoolName} is committed to delivering quality education 
     in a nurturing and disciplined environment. Our institution focuses on building strong 
     academic foundations, moral values, creativity, leadership, and confidence among students. 
     We strive to create responsible individuals prepared to excel in every stage of life.`,
@@ -80,7 +80,7 @@ export const ABOUT_SECTION_CONTENT = {
 export const ACADEMICS_SECTION_CONTENT = {
   header: {
     title: 'Academics',
-    subtitle: 'Quality Education from Pre-Primary to Class VIII',
+    subtitle: 'Best Curriculum from Pre-Primary to Class 8 in Supaul',
   },
 
   intro:
@@ -122,8 +122,8 @@ export const ACADEMICS_SECTION_CONTENT = {
 };
 export const ADMISSIONS_SECTION_CONTENT = {
   header: {
-    title: 'Admissions',
-    subtitle: 'Enroll Your Child for a Bright Future',
+    title: 'Admissions 2026-27 Open',
+    subtitle: 'Enroll Now at Best School in Supaul',
   },
 
   intro:
