@@ -31,8 +31,8 @@ export class AppComponent {
   private title = inject(Title);
   private meta = inject(Meta);
   constructor() {
-    this.title.setTitle(schoolName);
-    this.meta.updateTag({ name: 'description', content: 'Quality education with academic excellence.' });
+    this.title.setTitle('St. Xavier’s Public School Supaul | Best School in Supaul, Bihar');
+    this.meta.updateTag({ name: 'description', content: 'St. Xavier’s Public School Supaul offers quality education from Pre-Primary to Class 8. Best school in Supaul for academics, discipline & holistic development.' });
     if (isPlatformBrowser(this.platformId)) {
       const theme = this.getInitialTheme();
       localStorage.setItem('theme', theme);
