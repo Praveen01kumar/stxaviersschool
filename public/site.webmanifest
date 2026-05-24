@@ -1,7 +1,7 @@
 {
   "name": "St. Xavier’s Public School | Best School in Supaul, Bihar",
   "short_name": "St. Xavier’s School",
-  "description": "St. Xavier’s Public School Supaul offers modern learning environment from Pre-Primary to Class 8. Best school in Supaul for academics, discipline & holistic development.",
+  "description": "St. Xavier’s Public School Supaul offers quality education from Pre-Primary to Class 8. Best school in Supaul for academics, discipline & holistic development.",
   "start_url": "/?source=pwa",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -9,5 +9,12 @@
   "orientation": "portrait-primary",
   "lang": "en-IN",
   "scope": "/",
-  "id": "stxavierspublicschools.in"
+  "id": "stxavierspublicschools.in",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
 }

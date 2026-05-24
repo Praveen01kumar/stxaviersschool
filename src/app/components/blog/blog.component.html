@@ -13,7 +13,7 @@
       <div
         class="group bg-[var(--background)] rounded-3xl overflow-hidden border border-[var(--border-color)] shadow-[var(--shadow-lg)] hover:-translate-y-2 transition-all duration-500">
         <div class="relative overflow-hidden">
-          <img [src]="blog.imageUrl" [alt]="blog.title" loading="lazy" decoding="async" fetchpriority="high"
+          <img [src]="blog.imageUrl" [alt]="blog.title" [title]="blog.title" loading="lazy" decoding="async" fetchpriority="high"
             class="w-full h-60 object-cover transition-transform duration-700 group-hover:scale-110">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
           <div

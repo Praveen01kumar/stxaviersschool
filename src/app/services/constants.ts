@@ -28,9 +28,8 @@ export const HEADER_SECTION_CONTENT = {
     feeStructurePdf: 'assets/download_fee_structure.pdf',
     exportedName: 'fee_structure'
   },
-  imageAlt: `Students studying at ${schoolName}`
+  imageAlt: `Official logo of ${schoolName}`
 };
-
 export const ABOUT_SECTION_CONTENT = {
   header: {
     title: 'About St. Xavier’s Public School Supaul',
@@ -461,40 +460,6 @@ export const FEES_SECTION_CONTENT = {
   notice:
     'School fees must be deposited in advance before the 10th of every month.',
 };
-export const CERTIFICATIONS_SECTION_CONTENT = {
-  header: {
-    title: 'Certificates',
-    subtitle: 'My professional credentials',
-  },
-
-  certificates: [
-    {
-      title: 'Basic Life Support (BLS)',
-      issuer: 'Certified Body',
-      imageUrl: 'https://picsum.photos/400/250?random=1',
-    },
-    {
-      title: 'First Aid Certification',
-      issuer: 'Certified Body',
-      imageUrl: 'https://picsum.photos/400/250?random=2',
-    },
-    {
-      title: 'Clinical Training Completion',
-      issuer: 'Nursing College',
-      imageUrl: 'https://picsum.photos/400/250?random=3',
-    },
-    {
-      title: 'Community Health Training',
-      issuer: 'Health Department',
-      imageUrl: 'https://picsum.photos/400/250?random=4',
-    },
-    {
-      title: 'Covid Duty Certificate',
-      issuer: 'Government Hospital',
-      imageUrl: 'https://picsum.photos/400/250?random=5',
-    },
-  ],
-};
 export const CONTACT_SECTION_CONTENT = {
   header: {
     title: 'Contact Our School',
@@ -550,5 +515,5 @@ export const FOOTER_SECTION_CONTENT = {
   copyrightText: 'All Rights Reserved.',
 
   description:
-  'St. Xavier’s Public School Supaul provides quality English medium education with focus on academic excellence, discipline, moral values, and holistic student development.'
+  'St. Xavier’s Public School Supaul offers quality education from Pre-Primary to Class 8. Best school in Supaul for academics, discipline & holistic development.'
 };

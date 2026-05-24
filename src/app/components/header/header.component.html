@@ -2,7 +2,7 @@
   <nav class="container mx-auto px-4 sm:px-6 py-4">
     <div class="flex items-center justify-between">
       <a href="#home" (click)="$event.preventDefault(); scrollToSection('home')" class="flex items-center gap-2" [attr.aria-label]="headerCon.schoolName">
-        <img class="h-8 w-8 text-[var(--primary)]" [src]="headerCon.assets.logo" viewBox="0 0 24 24" [alt]="headerCon.imageAlt" loading="lazy" decoding="async" fetchpriority="high">
+        <img class="h-8 w-8 text-[var(--primary)]" [src]="headerCon.assets.logo" [alt]="headerCon.imageAlt" loading="lazy" decoding="async" fetchpriority="high">
         <span class="text-xl font-bold text-[var(--text-heading)] hidden sm:inline">{{ headerCon.schoolName }}</span>
       </a>
 

@@ -38,7 +38,9 @@
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "prerender": true,
+            "prerender": {
+              "discoverRoutes": true
+            },
             "ssr": {
               "entry": "server.ts"
             }
@@ -105,11 +107,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "a8526463-1b1d-4b48-9021-d38f9e351d5c"
+    "analytics": "a8526463-1b1d-4b48-9021-d38f9e351d5c",
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   }
 }

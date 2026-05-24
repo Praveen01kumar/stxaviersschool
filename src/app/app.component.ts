@@ -17,12 +17,11 @@ import { ResultsComponent } from './components/results/results.component';
 import { FeesComponent } from './components/fees/fees.component';
 export type Theme = 'light' | 'dark' | 'system';
 import { Meta, Title } from '@angular/platform-browser';
-import { schoolName } from './services/constants';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HeroComponent, AboutComponent, ContactComponent, FooterComponent, AcademicsComponent, AdmissionsComponent, FacultyComponent, GalleryComponent, EventsComponent, BlogComponent, ResultsComponent, FeesComponent],
+  imports: [HeaderComponent, HeroComponent, AboutComponent, ContactComponent, FooterComponent, AcademicsComponent, AdmissionsComponent, FacultyComponent, GalleryComponent, EventsComponent, BlogComponent, ResultsComponent, FeesComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
@@ -33,6 +32,8 @@ export class AppComponent {
   constructor() {
     this.title.setTitle('St. Xavier’s Public School | Best School in Supaul, Bihar');
     this.meta.updateTag({ name: 'description', content: 'St. Xavier’s Public School Supaul offers quality education from Pre-Primary to Class 8. Best school in Supaul for academics, discipline & holistic development.' });
+    this.meta.updateTag({ property: 'og:title', content: 'St. Xavier’s Public School | Best School in Supaul, Bihar' });
+    this.meta.updateTag({ property: 'og:description', content: 'St. Xavier’s Public School Supaul offers quality education from Pre-Primary to Class 8. Best school in Supaul for academics, discipline & holistic development.' });
     if (isPlatformBrowser(this.platformId)) {
       const theme = this.getInitialTheme();
       localStorage.setItem('theme', theme);
