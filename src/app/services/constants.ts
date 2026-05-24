@@ -26,28 +26,33 @@ export const HEADER_SECTION_CONTENT = {
   assets: {
     logo: 'assets/logo.png',
     feeStructurePdf: 'assets/download_fee_structure.pdf',
-    exportedName:'fee_structure'
+    exportedName: 'fee_structure'
   },
-  imageAlt:`Students studying at ${schoolName}`
+  imageAlt: `Students studying at ${schoolName}`
 };
+
 export const ABOUT_SECTION_CONTENT = {
   header: {
-    title: 'About Our School',
+    title: 'About St. Xavier’s Public School Supaul',
     subtitle: 'Our Journey and Vision in Education',
   },
 
   leftc: {
-    mainHeading: 'Dedicated to Academic Excellence and Student Development',
-    description: `${schoolName} is one of the leading schools in Supaul providing quality English medium education from Play Group to Class 8. We focus on academic excellence, moral values, discipline, and holistic development of every child. ${schoolName} is committed to delivering quality education 
-    in a nurturing and disciplined environment. Our institution focuses on building strong 
-    academic foundations, moral values, creativity, leadership, and confidence among students. 
-    We strive to create responsible individuals prepared to excel in every stage of life.`,
+    mainHeading: 'Best English Medium School in Supaul for Academic Excellence and Holistic Student Development',
+
+    description: `${schoolName} is one of the leading English medium schools in Supaul, Bihar, providing quality education from Play Group to Class 8. Since its establishment, the school has focused on academic excellence, discipline, moral values, and holistic student development in a safe and nurturing learning environment.
+
+Our teaching methodology combines conceptual learning, classroom interaction, practical activities, and student-centered education to help children build strong academic foundations and life skills. We encourage creativity, leadership, confidence, communication, and critical thinking among students.
+
+The school infrastructure includes spacious classrooms, a healthy learning environment, sports facilities, computer education support, and a disciplined campus atmosphere that promotes effective education and student engagement. We continuously work toward creating an educational environment where students feel motivated and inspired to achieve their goals.
+
+At ${schoolName}, we strongly believe that every child deserves equal opportunities for growth and success. Our experienced teachers and supportive school environment help students improve academically, socially, emotionally, and ethically.
+
+Parents trust our institution for delivering quality education, maintaining discipline, ensuring student well-being, and encouraging participation in co-curricular and extracurricular activities. Our vision is to create responsible citizens with strong values, knowledge, and confidence to excel in every stage of life.`,
 
     career: {
       title: 'Our Mission',
-      text: `To provide value-based and holistic education that inspires students to 
-      achieve academic excellence, develop critical thinking, and become responsible citizens 
-      of society.`,
+      text: `To provide value-based and holistic education that inspires students to achieve academic excellence, develop critical thinking, strengthen moral values, and become responsible citizens prepared for future success.`,
     },
 
     philosophy: {
@@ -55,11 +60,13 @@ export const ABOUT_SECTION_CONTENT = {
       parts: [
         { text: 'We believe every child deserves an environment that encourages ' },
         { text: 'learning', highlight: true },
-        { text: ', builds strong ' },
+        { text: ', develops strong ' },
+        { text: 'academic skills', highlight: true },
+        { text: ', builds positive ' },
         { text: 'character', highlight: true },
-        { text: ', and promotes lifelong ' },
+        { text: ', and supports lifelong ' },
         { text: 'growth', highlight: true },
-        { text: ' through quality education and positive values.' }
+        { text: ' through quality education, discipline, creativity, and modern teaching practices.' }
       ]
     }
   },
@@ -68,7 +75,7 @@ export const ABOUT_SECTION_CONTENT = {
     title: 'Quick Information',
     Profile: [
       { title: 'School Name:', value: schoolName },
-      { title: 'Location:', value: 'Supaul, Thakurbari Road, Ward no.- 26, Bihar, India.' },
+      { title: 'Location:', value: 'St. Xavier’s Public School, Thakurbari Road, Ward No. 26, Supaul, Bihar 852131, India.' },
       { title: 'Medium:', value: 'English Medium' },
       { title: 'Focus:', value: 'Academic & Holistic Development' },
       { title: 'Activities:', value: 'Sports, Cultural & Co-curricular Activities' },
@@ -76,6 +83,77 @@ export const ABOUT_SECTION_CONTENT = {
     ]
   },
 
+  whyChooseUs: {
+    title: 'Why Choose St. Xavier’s Public School?',
+    points: [
+      'Experienced faculty with student-focused teaching methods',
+      'Spacious classrooms with positive learning environment',
+      'Discipline-focused education with moral values',
+      'Affordable fee structure for quality education',
+      'Sports, cultural programs, and extracurricular activities',
+      'Safe and student-friendly campus environment',
+    ]
+  },
+
+  facilities: {
+    title: 'School Facilities',
+    items: [
+      'Library with academic learning resources',
+      'Spacious classrooms for effective learning',
+      'Large playground for sports and physical activities',
+      'Transportation facilities for students',
+      'Computer education support for practical learning',
+      'Science learning activities for students',
+      'Safe and disciplined school environment',
+    ]
+  },
+
+  faqs: [
+    {
+      question: 'Which classes are available at St. Xavier’s Public School?',
+      answer: 'Admissions are available from Play Group to Class 8 for students seeking quality English medium education in Supaul.',
+    },
+    {
+      question: 'Is St. Xavier’s Public School an English medium school?',
+      answer: 'Yes, St. Xavier’s Public School is a leading English medium school in Supaul, Bihar.',
+    },
+    {
+      question: 'Does the school provide extracurricular activities?',
+      answer: 'Yes, students participate in sports, cultural programs, competitions, and co-curricular activities for holistic development.',
+    },
+    {
+      question: 'Does the school focus on discipline and moral values?',
+      answer: 'Yes, the school strongly focuses on discipline, moral education, student behavior, and responsible citizenship.',
+    },
+    {
+      question: 'Are smart classrooms available?',
+      answer: 'Yes, the school provides smart classroom learning facilities to improve interactive education and student engagement.',
+    },
+    {
+      question: 'Does the school provide transportation facilities?',
+      answer: 'Yes, transportation facilities are available for students from nearby areas.',
+    },
+    {
+      question: 'Why do parents choose St. Xavier’s Public School?',
+      answer: 'Parents trust the school for quality education, experienced teachers, student safety, academic excellence, and holistic development.',
+    },
+    {
+      question: 'Does the school support digital learning?',
+      answer: 'Yes, the school integrates digital learning methods and modern educational practices into classroom teaching.',
+    },
+    {
+      question: 'Where is St. Xavier’s Public School located?',
+      answer: 'The school is located at Thakurbari Road, Ward No. 26, Supaul, Bihar, India.',
+    },
+    {
+      question: 'How can parents contact the school for admissions?',
+      answer: 'Parents can contact the school administration through phone, email, or by visiting the campus during working hours.',
+    },
+    {
+      question: 'Are modern classroom facilities available?',
+      answer: 'Yes, the school provides spacious and student-friendly classrooms designed to support effective learning and academic development.',
+    },
+  ],
 };
 export const ACADEMICS_SECTION_CONTENT = {
   header: {
@@ -91,23 +169,23 @@ export const ACADEMICS_SECTION_CONTENT = {
   sections: [
     {
       title: 'Pre-Primary Education',
-      classes: 'Play to U.Kg.',
+      classes: 'Play Group to U.Kg.',
       description:
-        'Focus on foundational learning, communication skills, creativity, and interactive classroom activities for young learners.',
+        'Our pre-primary education program focuses on early childhood learning, communication skills, creativity, social interaction, and activity-based education. Students develop confidence, discipline, and foundational academic skills through engaging classroom activities and child-friendly teaching methods.',
     },
 
     {
       title: 'Primary Education',
       classes: 'Class 1 - 5',
       description:
-        'Focus on foundational learning, communication skills, creativity, and interactive classroom activities for young learners.',
+        'The primary education curriculum builds strong academic foundations in English, Mathematics, Science, and General Knowledge while encouraging student participation, classroom learning, moral values, creativity, and overall personality development in a disciplined learning environment.',
     },
 
     {
       title: 'Middle School Education',
       classes: 'Class 6 - 8',
       description:
-        'Encouraging analytical thinking, subject understanding, practical learning, and participation in co-curricular activities.',
+        'Our middle school education program encourages analytical thinking, conceptual understanding, subject knowledge, leadership skills, practical learning, and participation in sports and co-curricular activities to prepare students for higher academic success and future growth.',
     },
   ],
 
@@ -127,7 +205,7 @@ export const ADMISSIONS_SECTION_CONTENT = {
   },
 
   intro:
-    "Admissions are open for classes 1 to 10. We welcome students into a positive learning environment focused on academic excellence, discipline, and overall personality development.",
+    "Admissions are open from Play Group to Class 8 for students seeking quality English medium education in Supaul. We welcome students into a positive learning environment focused on academic excellence, discipline, and overall personality development.",
 
   steps: [
     {
@@ -179,8 +257,7 @@ export const FACULTY_SECTION_CONTENT = {
     {
       name: 'Mr. Baiju Mathew',
       role: 'Director',
-      description:
-        'Providing visionary leadership and guidance for the overall growth and development of the institution.',
+      description:'Providing visionary leadership and guidance for the overall growth and development of the institution.',
       imageUrl: 'assets/faculty_1.webp',
       phone: '8757805509',
     },
@@ -188,8 +265,7 @@ export const FACULTY_SECTION_CONTENT = {
     {
       name: 'Bina Kumari',
       role: 'Principal',
-      description:
-        'Leading academic excellence with focus on discipline, quality education, and student development.',
+      description:'Leading academic planning, student development, discipline management, and educational excellence at St. Xavier’s Public School Supaul.',
       imageUrl: 'assets/faculty_2.webp',
       phone: '9113183802',
     },
@@ -437,7 +513,7 @@ export const CONTACT_SECTION_CONTENT = {
   contactDetails: {
     phone: '+91 8757805509, 9122122615, 9431890566',
     email: schoolMail,
-    location: 'Supaul, Thakurbari Road, Ward no.- 26, Bihar, India.',
+    location: 'St. Xavier’s Public School, Thakurbari Road, Ward No. 26, Supaul, Bihar 852131, India., India.',
   },
 
   form: {
@@ -462,7 +538,7 @@ export const CONTACT_SECTION_CONTENT = {
     title: 'Find Us on Map',
     embedLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.90661650261347!2d86.60122840242303!3d26.115044257875606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ee423e19ccfefd%3A0xca454c0c6cc3546!2sSt.%20Xaviers%20Public%20School!5e0!3m2!1sen!2sin!4v1778556067088!5m2!1sen!2sin',
     openLink: 'https://maps.google.com/?q=4J82+2FG, Thakur Bari Rd, Supaul, Bihar 852131',
-    button:'Open in Google Maps'
+    button: 'Open in Google Maps'
   }
 };
 export const FOOTER_SECTION_CONTENT = {
@@ -474,5 +550,5 @@ export const FOOTER_SECTION_CONTENT = {
   copyrightText: 'All Rights Reserved.',
 
   description:
-    'Designed with care to reflect professional dedication.',
+  'St. Xavier’s Public School Supaul provides quality English medium education with focus on academic excellence, discipline, moral values, and holistic student development.'
 };
